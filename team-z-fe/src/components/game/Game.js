@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+
+
 function Game() {
 
     useEffect(()=> {
-        axios.get('https://lambda-mud-test.herokuapp.com/api/adv/init')
+        axios.get('https://lambda-mud-test.herokuapp.com/api/adv/init/')
         .then( res => {
             console.log(res)
         })
