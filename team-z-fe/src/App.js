@@ -6,7 +6,7 @@ import axios from 'axios';
 const App = () => {
 
   const [token,setToken]=useState(null)
-  
+  const [user, setUser] = useState({})
   useEffect(() => {
     const user = {
       "username": 'billybobdjango',
@@ -43,7 +43,7 @@ const App = () => {
     <Router>
       <div className="App">
       {
-        localStorage.getItem('token') == token && <Game />
+        localStorage.getItem('token') == token && <Game user={user} setUser={setUser} />
       }
       
             
